@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/musiclist_recycler_shape"
+    android:elevation="10dp"
+    android:padding="5dp">
+
+    <ImageView
+        android:id="@+id/ivAlbumImage"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/musiclist_recycler_ivalbumimage_shape"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/music" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="제목"
+        android:textColor="#FFFFFF"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintStart_toEndOf="@+id/ivAlbumImage"
+        app:layout_constraintTop_toTopOf="@+id/ivAlbumImage" />
+
+    <TextView
+        android:id="@+id/tvArtist"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="가수"
+        android:textColor="#FFFFFF"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:textSize="18sp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        app:layout_constraintBottom_toBottomOf="@+id/ivAlbumImage"
+        app:layout_constraintStart_toEndOf="@+id/ivAlbumImage"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <ImageView
+        android:id="@+id/ivItemLike"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="70dp"
+        android:onClick="onClick"
+        android:src="@drawable/favorite_unlike_24"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTitle"
+        app:layout_constraintStart_toEndOf="@+id/tvTitle"
+        app:layout_constraintTop_toTopOf="@+id/tvTitle"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:text="노래 길이"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvArtist"
+        app:layout_constraintStart_toEndOf="@+id/tvArtist"
+        app:layout_constraintTop_toTopOf="@+id/tvArtist" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
